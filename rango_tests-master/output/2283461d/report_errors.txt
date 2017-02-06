@@ -1,0 +1,87 @@
+
+
+rango.tests_chapter4.Chapter4ViewTest.test_about_contain_image
+F
+======================================================================
+FAIL: test_about_contain_image (rango.tests_chapter4.Chapter4ViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter4.py", line 51, in test_about_contain_image
+    self.assertIn('img src="/static/images/', response.content)
+AssertionError: 'img src="/static/images/' not found in '<!DOCTYPE html>\n\n\n\n<html>\n\n    <head>\n        <title>About Rango</title>\n    </head>\n\n    <body>\n        <h1>About Rango</h1>\n        <div>\n            This tutorial has been put together by Catherine Daly<br />\n            <strong>This is the about page!</strong><br />\n        </div>\n        <div>\n            <a href="/rango/">Index</a><br />\n            <img src="/media/cat.jpg">\n\n\n        </div>\n    </body>\n\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.037s
+
+FAILED (failures=1)
+===========================================================================
+
+
+rango.tests_chapter6.Chapter6ViewTests.test_index_displays_five_most_viewed_pages
+F
+======================================================================
+FAIL: test_index_displays_five_most_viewed_pages (rango.tests_chapter6.Chapter6ViewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter6.py", line 89, in test_index_displays_five_most_viewed_pages
+    self.assertIn("Page " + str(i), response.content)
+AssertionError: 'Page 20' not found in '<!DOCTYPE html>\n\n<html>\n<head>\n    <title>Rango</title>\n</head>\n\n<body>\n    <h1>Rango says...</h1>\n    <div>hey there partner!</div>\n\n    <div>\n    \n    <h2>Most Liked Categories</h2>\n    <ul>\n        \n            <li><a href="/rango/category/category-10">Category 10</a></li>\n        \n            <li><a href="/rango/category/category-9">Category 9</a></li>\n        \n            <li><a href="/rango/category/category-8">Category 8</a></li>\n        \n            <li><a href="/rango/category/category-7">Category 7</a></li>\n        \n            <li><a href="/rango/category/category-6">Category 6</a></li>\n        \n    </ul>\n    \n  </div>\n    <div>\n    \n    <h2>Most Viewed Pages</h2>\n    <ul>\n        \n            <li><a href = "http://www.page1.com">Page 1</a></li>\n        \n            <li><a href = "http://www.page2.com">Page 2</a></li>\n        \n            <li><a href = "http://www.page3.com">Page 3</a></li>\n        \n            <li><a href = "http://www.page4.com">Page 4</a></li>\n        \n            <li><a href = "http://www.page5.com">Page 5</a></li>\n        \n    </ul>\n    \n    </div>\n    <div>\n      <a href="/rango/about/">About Rango</a><br />\n      <a href="/rango/add_category/">Add a New Category</a><br />\n      <img src="/static/images/rango.jpg" alt="Picture of Rango" />\n    </div>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.029s
+
+FAILED (failures=1)
+===========================================================================
+
+
+
+
+
+
+
+
+
+rango.tests_chapter6.Chapter6ViewTests.test_index_context
+F
+======================================================================
+FAIL: test_index_context (rango.tests_chapter6.Chapter6ViewTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter6.py", line 57, in test_index_context
+    self.assertItemsEqual(response.context['pages'], pages)
+AssertionError: Element counts were not equal:
+First has 1, Second has 0:  <Page: Page 1>
+First has 1, Second has 0:  <Page: Page 2>
+First has 1, Second has 0:  <Page: Page 3>
+First has 1, Second has 0:  <Page: Page 4>
+First has 1, Second has 0:  <Page: Page 5>
+First has 0, Second has 1:  <Page: Page 20>
+First has 0, Second has 1:  <Page: Page 19>
+First has 0, Second has 1:  <Page: Page 18>
+First has 0, Second has 1:  <Page: Page 17>
+First has 0, Second has 1:  <Page: Page 16>
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+FAILED (failures=1)
+===========================================================================
+
+
+rango.tests_chapter5.Chapter5ModelTests.test_population_script_changes
+F
+======================================================================
+FAIL: test_population_script_changes (rango.tests_chapter5.Chapter5ModelTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter5.py", line 66, in test_population_script_changes
+    self.assertEquals(cat.views, 64)
+AssertionError: 0 != 64
+
+----------------------------------------------------------------------
+Ran 1 test in 0.036s
+
+FAILED (failures=1)
+===========================================================================
+
+

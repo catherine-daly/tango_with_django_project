@@ -44,7 +44,7 @@ def populate():
           "views":67} ]
 
      cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
-            "Django": {"pages": django_pages,"views": 0, "likes": 0},
+            "Django": {"pages": django_pages,"views": 64, "likes": 32},
             "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16} }
 
     # If you want to add more catergories or pages,
