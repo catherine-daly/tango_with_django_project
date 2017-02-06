@@ -19,7 +19,7 @@
     "chapter5": {
         "Chapter5ModelTests.test_create_pages_for_categories": true, 
         "Chapter5ModelTests.test_create_a_new_category": true, 
-        "Chapter5ModelTests.test_population_script_changes": false
+        "Chapter5ModelTests.test_population_script_changes": true
     }, 
     "chapter4": {
         "Chapter4ViewTest.test_cat_picture_displayed": true, 
@@ -32,7 +32,7 @@
     }, 
     "chapter7": {
         "Chapter7ViewTests.test_index_contains_link_to_add_category": true, 
-        "Chapter7ViewTests.test_add_category_form_is_displayed_correctly": false, 
+        "Chapter7ViewTests.test_add_category_form_is_displayed_correctly": true, 
         "Chapter7ViewTests.test_access_category_that_does_not_exists": true, 
         "Chapter7ViewTests.test_category_contains_link_to_add_page": true, 
         "Chapter7ViewTests.test_link_to_add_page_only_appears_in_valid_categories": true, 
