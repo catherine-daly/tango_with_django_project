@@ -42,11 +42,11 @@
         "Chapter6ViewTests.test_index_displays_five_most_liked_categories": true, 
         "Chapter6ViewTests.test_category_page_using_template": true, 
         "Chapter6ViewTests.test_index_displays_no_categories_message": true, 
-        "Chapter6ViewTests.test_index_context": false, 
+        "Chapter6ViewTests.test_index_context": true, 
         "Chapter6ViewTests.test_category_context": true, 
         "Chapter6ModelTests.test_category_contains_slug_field": true, 
         "Chapter6ViewTests.test_category_page_displays_empty_message": true, 
-        "Chapter6ViewTests.test_index_displays_five_most_viewed_pages": false, 
+        "Chapter6ViewTests.test_index_displays_five_most_viewed_pages": true, 
         "Chapter6ViewTests.test_category_page_displays_category_does_not_exist_message": true, 
         "Chapter6ViewTests.test_category_page_displays_pages": true, 
         "Chapter6ViewTests.test_index_contains_link_to_categories": true
