@@ -8,7 +8,7 @@
         "Chapter9ViewTests.test_login_provides_error_message": false
     }, 
     "chapter8": {
-        "Chapter8ViewTests.test_base_template_exists": false, 
+        "Chapter8ViewTests.test_base_template_exists": true, 
         "Chapter8ViewTests.test_url_reference_in_category_page": true, 
         "Chapter8ViewTests.test_link_to_index_in_base_template": true, 
         "Chapter8ViewTests.test_url_reference_in_index_page_when_not_logged": true, 
