@@ -1,11 +1,11 @@
 {
     "chapter9": {
-        "Chapter9ViewTests.test_login_form_is_displayed_correctly": false, 
-        "Chapter9ViewTests.test_registration_form_is_displayed_correctly": false, 
-        "Chapter9ViewTests.test_login_redirects_to_index": false, 
-        "Chapter9ViewTests.test_upload_image": false, 
-        "Chapter9ModelTests.test_user_profile_model": false, 
-        "Chapter9ViewTests.test_login_provides_error_message": false
+        "Chapter9ViewTests.test_login_form_is_displayed_correctly": true, 
+        "Chapter9ViewTests.test_registration_form_is_displayed_correctly": true, 
+        "Chapter9ViewTests.test_login_redirects_to_index": true, 
+        "Chapter9ViewTests.test_upload_image": true, 
+        "Chapter9ModelTests.test_user_profile_model": true, 
+        "Chapter9ViewTests.test_login_provides_error_message": true
     }, 
     "chapter8": {
         "Chapter8ViewTests.test_base_template_exists": true, 
