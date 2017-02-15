@@ -56,8 +56,8 @@
         "Chapter3ViewTests.test_index_contains_hello_message": true
     }, 
     "chapter10": {
-        "Chapter10ViewTests.test_index_shows_number_of_visits": false, 
-        "Chapter10SessionTests.test_user_number_of_access_and_last_access_to_index": false, 
+        "Chapter10ViewTests.test_index_shows_number_of_visits": true, 
+        "Chapter10SessionTests.test_user_number_of_access_and_last_access_to_index": true, 
         "Chapter10ViewTests.test_visit_number_is_passed_via_context": false, 
         "Chapter10ViewTests.test_about_page_shows_number_of_visits": false
     }

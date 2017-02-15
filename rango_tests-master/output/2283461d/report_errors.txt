@@ -9,45 +9,9 @@ Traceback (most recent call last):
 AssertionError: 'visits: 1' not found in '<!doctype html>\n\n\n\n<html>\n  <head lang = "en">\n    <title>\n      rango -\n      \n  about rango\n\n    </title>\n  </head>\n  <body>\n    <div>\n    \n  <h1>about rango</h1>\n  <div>\n    <img src="/static/images/dog.jpg" alt="picture of a dog" />\n  </div>\n  <div>\n    this tutorial has been put together by catherine daly<br />\n    <strong></strong><br />\n  </div>\n  <div>\n    <a href="/rango/">index</a><br />\n    <img src="/media/cat.jpg">\n  </div>\n\n    </div>\n    <hr />\n    <div>\n\n      <ul>\n        \n          <li><a href="/rango/login/">sign in</a></li>\n          <li><a href="/rango/register/">sign up</a></li>\n        \n          <li><a href="/rango/about/">about</a></li>\n          <li><a href="/rango/">index</a></li>\n      </ul>\n    </div>\n    <div>\n      \n        <ul>\n\n  <li><strong> there are no categories present.</strong></li>\n\n</ul>\n\n      \n    </div>\n  </body>\n</html>\n'
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.065s
+Ran 1 test in 0.067s
 
 FAILED (failures=1)
-===========================================================================
-
-
-rango.tests_chapter10.Chapter10ViewTests.test_index_shows_number_of_visits
-F
-======================================================================
-FAIL: test_index_shows_number_of_visits (rango.tests_chapter10.Chapter10ViewTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter10.py", line 86, in test_index_shows_number_of_visits
-    self.assertIn('visits: 1'.lower(), response.content.lower())
-AssertionError: 'visits: 1' not found in '<!doctype html>\n\n\n\n<html>\n  <head lang = "en">\n    <title>\n      rango -\n      \n  homepage!\n\n    </title>\n  </head>\n  <body>\n    <div>\n    \n  <h1>rango says...</h1>\n  \n    hey there partner!\n    <p>visits: </p>\n  \n  <div>\n    \n      <strong>there are no categories present.</strong>\n    \n  </div>\n  <div>\n    \n      <strong>there are no pages present.</strong>\n    \n</div>\n\n    </div>\n    <hr />\n    <div>\n\n      <ul>\n        \n          <li><a href="/rango/login/">sign in</a></li>\n          <li><a href="/rango/register/">sign up</a></li>\n        \n          <li><a href="/rango/about/">about</a></li>\n          <li><a href="/rango/">index</a></li>\n      </ul>\n    </div>\n    <div>\n      \n        <ul>\n\n  <li><strong> there are no categories present.</strong></li>\n\n</ul>\n\n      \n    </div>\n  </body>\n</html>\n'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.065s
-
-FAILED (failures=1)
-===========================================================================
-
-
-rango.tests_chapter10.Chapter10SessionTests.test_user_number_of_access_and_last_access_to_index
-E
-======================================================================
-ERROR: test_user_number_of_access_and_last_access_to_index (rango.tests_chapter10.Chapter10SessionTests)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter10.py", line 55, in test_user_number_of_access_and_last_access_to_index
-    self.assertIsNotNone(self.client.session['visits'])
-  File "/Users/catherinedaly/.virtualenvs/rango/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 57, in __getitem__
-    return self._session[key]
-KeyError: 'visits'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.061s
-
-FAILED (errors=1)
 ===========================================================================
 
 
@@ -57,12 +21,12 @@ F
 FAIL: test_visit_number_is_passed_via_context (rango.tests_chapter10.Chapter10ViewTests)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter10.py", line 121, in test_visit_number_is_passed_via_context
+  File "/Users/catherinedaly/Documents/University/Workspace/tango_with_django_project/rango_tests-master/temporal/rango/tests_chapter10.py", line 133, in test_visit_number_is_passed_via_context
     self.assertIn('visits', response.context)
-AssertionError: 'visits' not found in [[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x103debb90>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x103b8a9d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103b56890>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x103dc59d0>, u'request': <WSGIRequest: GET '/rango/'>, u'MEDIA_URL': '/media/'}, {}, {'pages': <QuerySet []>, 'categories': <QuerySet []>}], [{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x103debb90>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x103b8a9d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103b56890>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x103dc59d0>, u'request': <WSGIRequest: GET '/rango/'>, u'MEDIA_URL': '/media/'}, {}, {'pages': <QuerySet []>, 'categories': <QuerySet []>}], [{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function _get_val at 0x103debb90>>, 'cats': <QuerySet []>, 'act_cat': ''}]]
+AssertionError: 'visits' not found in [[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x103bba668>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x103b9ef90>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103be04d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x103b9edd0>, u'request': <WSGIRequest: GET '/rango/about/'>, u'MEDIA_URL': '/media/'}, {}], [{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x103bba668>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x103b9ef90>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103be04d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x103b9edd0>, u'request': <WSGIRequest: GET '/rango/about/'>, u'MEDIA_URL': '/media/'}, {}], [{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function _get_val at 0x103bba668>>, 'cats': <QuerySet []>, 'act_cat': ''}]]
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.054s
+Ran 1 test in 0.070s
 
 FAILED (failures=1)
 ===========================================================================
