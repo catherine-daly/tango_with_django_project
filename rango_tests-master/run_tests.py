@@ -142,7 +142,16 @@ def main(url_git, student_no, date_deadline):
         os.chdir(os.path.join(BASE_DIR, TEMP_DIR))
         ret = subprocess.call(GIT_CHKOUT + " " + c, shell=True)
         assert ret == 0
+        
+        working_dir = ''
+        for root, dirs, files in os.walk("."):
+            for name in files:
+                if 'manage.py' == name:
+                    working_dir = os.path.abspath(root)
+                    break
 
+        print working_dir
+        
         # RUN TESTS HERE!!!!
         if os.path.isdir(os.path.abspath(working_dir + '/rango')):
             os.chdir(working_dir)
