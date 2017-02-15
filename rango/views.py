@@ -13,6 +13,7 @@ from datetime import datetime
 
 def index(request):
     request.session.set_test_cookie()
+
     if request.session.test_cookie_worked():
         print("TEST COOKIE WORKED!")
         request.session.delete_test_cookie()
@@ -29,17 +30,24 @@ def index(request):
     return response
 
 def about(request):
-
-    request.session.set_test_cookie()
-    print(request.method)
-    print(request.user)
+     #context_dict2 = {'testmessage': "This is the about page!"}
 
 
 
-    visitor_cookie_handler(request)
+     context_dict = {}
+
+     visitor_cookie_handler(request)
+     context_dict['visits'] = request.session['visits']
+
+     response = render(request, 'rango/about.html', context_dict)
+
+     print(request.method)
+     print(request.user)
+     #return render(request, 'rango/about.html', context=context_dict2)
+     return response
 
 
-    return render(request, 'rango/about.html', {})
+
 
 def show_category(request, category_name_slug):
     context_dict = {}
@@ -199,7 +207,7 @@ def visitor_cookie_handler(request):
     last_visit_cookie = get_server_side_cookie(request, 'last_visit', str(datetime.now()))
     last_visit_time = datetime.strptime(last_visit_cookie[:-7], '%Y-%m-%d %H:%M:%S')
 
-    if(datetime.now() - last_visit_time).days > 0:
+    if(datetime.now() - last_visit_time).seconds > 0:
         visits = visits+1
         request.session['last_visit'] = str(datetime.now())
 
